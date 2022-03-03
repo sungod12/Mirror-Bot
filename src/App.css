@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #bffcf9;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  font-weight: bold;
+}
+
+.userInput {
+  min-width: 65vw;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+}
+button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+button:hover {
+  animation: colorChange 1s forwards;
+}
+header {
+  background-color: #00c9c8;
+  color: #ffffff;
+  padding: 1.2rem;
+}
+.user-chat-bubble,
+.chatbot-chat-bubble {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 18px;
+  width: max-content;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  margin-inline: auto 1.5rem;
+  background-color: #00c9c8;
+  color: #ffffff;
+  margin-block: 20px;
+}
+.chatbot-chat-bubble {
+  margin-inline: 1.5rem auto;
+  background-color: #ffffff;
+  color: #000000;
+}
+.chat-window {
+  width: 90vw;
+  height: 75vh;
+  margin: 1.5rem auto;
+  overflow-y: auto;
+}
+.container {
+  width: 87vw;
+  margin: 0 auto;
+}
+.container,
+.sub-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+#chatbot-name,
+#green-circle {
+  margin-left: 0.5rem;
+}
+#green-circle {
+  background-color: green;
+  width: 0.1rem;
+  padding: 0.3rem;
+  border-radius: 50px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .userInput,
+  .button {
+    margin-top: 5rem;
+  }
+  .userInput {
+    width: 87%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .userInput {
+    width: 90%;
+  }
+  .userInput,
+  .button {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+  .chat-window {
+    height: 75vh;
+  }
+  .userInput {
+    width: 93%;
+  }
+}
+@keyframes colorChange {
+  0% {
+    background-color: initial;
+  }
+  100% {
+    background-color: #00c9c8;
+    color: #ffffff;
+  }
+}
